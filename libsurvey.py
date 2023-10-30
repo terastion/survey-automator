@@ -166,6 +166,7 @@ class HomeDepotSurveyTaker(SurveyTaker):
         if questionContent == self._uniqueQuestions[0]:
             self.click(*keys['noSpecial'])
         else:
+            # TODO: add better handling for unknown questions
             log('warn', 'No code present for this question! Fill it out manually and continue!')
             input()
         self.next()
